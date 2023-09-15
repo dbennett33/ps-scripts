@@ -6,15 +6,16 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; `
 # Install git
 choco install git -y
 
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
 
 if (Test-Path -Path "C:\ps-scripts" -PathType Container)
 {
     Set-Location "C:\ps-scripts"
-    "C:\Program Files\Git\bin\git.ex pull"
+    git pull
 }
 else {
     Set-Location "C:\"
-    "C:\Program Files\Git\bin\git.exe clone https://github.com/dbennett33/ps-scripts.git"
+    git clone https://github.com/dbennett33/ps-scripts.git
 }
  
 Set-Location "C:\ps-scripts\NewMachine"

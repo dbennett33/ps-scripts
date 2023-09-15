@@ -5,3 +5,14 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; `
 
 # Install git
 choco install git -y
+
+
+if (Test-Path -Path "C:\ps-scripts" -PathType Container)
+{
+    cd "C:\ps-scripts"
+    git pull
+}
+else {
+    cd "C:\"
+    git clone https://github.com/dbennett33/ps-scripts.git
+}

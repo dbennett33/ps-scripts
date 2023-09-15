@@ -17,3 +17,4 @@ else {
     git clone https://github.com/dbennett33/ps-scripts.git
 }
  
+cd "C:\ps-scripts\NewMachine"

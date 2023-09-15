@@ -1,6 +1,3 @@
-#Install git
-choco install git -y
-
 #Install vscode
 choco install vscode -y
 

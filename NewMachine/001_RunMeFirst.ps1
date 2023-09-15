@@ -10,11 +10,11 @@ choco install git -y
 if (Test-Path -Path "C:\ps-scripts" -PathType Container)
 {
     Set-Location "C:\ps-scripts"
-    git pull
+    "C:\Program Files\Git\bin\git.ex pull"
 }
 else {
     Set-Location "C:\"
-    git clone https://github.com/dbennett33/ps-scripts.git
+    "C:\Program Files\Git\bin\git.exe clone https://github.com/dbennett33/ps-scripts.git"
 }
  
 Set-Location "C:\ps-scripts\NewMachine"

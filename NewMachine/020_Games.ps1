@@ -2,7 +2,7 @@
 choco install steam -y
 
 #Install Battle.Net
-choco install battlenet -y
+choco install battle.net -y
 
 #Install Discord
 choco install discord -y
